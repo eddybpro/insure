@@ -1,0 +1,162 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Karla:wght@400;700&display=swap");
+
+:root {
+  --color-brand-1: hsl(270, 9%, 17%);
+  --color-brand-2: hsl(0, 0%, 98%);
+  --color-brand-3: hsl(273, 4%, 51%);
+
+  --color-site-1: hsl(256, 26%, 20%);
+  --color-site-2: hsl(216, 30%, 68%);
+
+  --font-dm-serif: "DM Serif Display", serif;
+  --font-karla: "Karla", sans-serif;
+}
+
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+ul {
+  list-style: none;
+}
+
+nav {
+  width: 100%;
+  padding: 3rem 2rem;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.Logo {
+  display: block;
+  width: 12rem;
+}
+
+.Logo > img {
+  width: 100%;
+}
+
+.Menu {
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
+}
+
+.Menu > button {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  width: 3.7rem;
+}
+
+.Menu > button > img {
+  width: 100%;
+}
+
+.NavLinks {
+  display: none;
+}
+
+.NavLinks.open {
+  display: block;
+  position: absolute;
+  top: 8rem;
+  left: 0;
+  right: 0;
+  height: calc(100vh - 8rem);
+  background: url("../assets/bg-pattern-mobile-nav.svg");
+  background-position: bottom left;
+  background-size: 100% 20rem;
+  background-repeat: no-repeat;
+  background-color: var(--color-brand-1);
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+.NavLinks-Link {
+  padding: 2.5rem 0;
+}
+
+.NavLinks-Link > a {
+  font-size: 1.8rem;
+  color: var(--color-brand-2);
+  text-decoration: none;
+  text-transform: uppercase;
+  font-family: var(--font-karla);
+}
+
+.NavLinks-Link.plans {
+  border: 2px solid var(--color-brand-2);
+}
+
+@media screen and (min-width: 768px) {
+  nav {
+    padding: 2rem 4rem;
+  }
+
+  .Logo {
+    width: 18rem;
+  }
+
+  .Menu {
+    display: none;
+  }
+
+  .NavLinks,
+  .NavLinks.open {
+    position: relative;
+    top: auto;
+    left: auto;
+    right: auto;
+    height: fit-content;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    background-color: transparent;
+    background: transparent;
+    padding: 0;
+  }
+
+  .NavLinks-Link {
+    padding: 1rem 2.5rem;
+  }
+
+  .NavLinks-Link > a {
+    color: var(--color-brand-3);
+    transition: all 0.2s ease-in-out;
+  }
+
+  .NavLinks-Link:hover > a {
+    color: var(--color-brand-1);
+  }
+
+  .NavLinks-Link.plans {
+    border-color: var(--color-brand-1);
+    transition: all 0.2s ease-in-out;
+  }
+
+  .NavLinks-Link.plans:hover {
+    background-color: var(--color-brand-1);
+  }
+
+  .NavLinks-Link.plans > a {
+    color: var(--color-brand-1);
+    transition: all 0.2s ease-in-out;
+  }
+
+  .NavLinks-Link.plans:hover > a {
+    color: var(--color-brand-2);
+  }
+}

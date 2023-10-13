@@ -1,0 +1,25 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Karla:wght@400;700&display=swap");
+
+:root {
+  --color-brand-1: hsl(270, 9%, 17%);
+  --color-brand-2: hsl(0, 0%, 98%);
+  --color-brand-3: hsl(273, 4%, 51%);
+
+  --color-site-1: hsl(256, 26%, 20%);
+  --color-site-2: hsl(216, 30%, 68%);
+
+  --font-dm-serif: "DM Serif Display", serif;
+  --font-karla: "Karla", sans-serif;
+}
+
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
